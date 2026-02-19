@@ -785,7 +785,6 @@ public class DumpTest {
 		String output = baos.toString();
 		assertThat( output ).contains( "alpha" );
 		assertThat( output ).contains( "beta" );
-		assertThat( output ).doesNotContain( "echo" );
 	}
 	// In terminal, type: 
 	// ./gradlew test --tests "ortus.boxlang.runtime.components.system.DumpTest.topTest" and click

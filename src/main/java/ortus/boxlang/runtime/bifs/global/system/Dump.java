@@ -63,7 +63,7 @@ public class Dump extends BIF {
 		    new Argument( false, "any", Key.var ),
 		    // A custom label to display above the dump (Only in HTML output)
 		    new Argument( false, Argument.STRING, Key.label, "" ),
-		    // The number of levels to display when dumping collections. Great to avoid dumping the entire world!
+		    // The maximum recursion depth when dumping nested structures
 		    new Argument( false, Argument.NUMERIC, Key.top ),
 		    // Whether to expand the dump. By default, the dump is expanded on the first level only
 		    new Argument( false, Argument.BOOLEAN, Key.expand, true ),
@@ -99,7 +99,7 @@ public class Dump extends BIF {
 	 *
 	 * @argument.label A custom label to display above the dump (Only in HTML output)
 	 *
-	 * @argument.top The number of levels to display when dumping collections. Great to avoid dumping the entire world! Default is inifinity. (Only in HTML output)
+	 * @argument.top The depth of the levels to display when dumping collections. (Only in HTML output)
 	 *
 	 * @argument.expand Whether to expand the dump. Be default, we try to expand as much as possible. (Only in HTML output)
 	 *

@@ -69,7 +69,7 @@ public class Dump extends Component {
 	 *
 	 * @attributes.label A custom label to display above the dump (Only in HTML output)
 	 *
-	 * @attributes.top The number of levels to display when dumping collections. Great to avoid dumping the entire world! Default is inifinity. (Only in HTML output)
+	 * @attributes.top The depth of the levels to display when dumping collections. (Only in HTML output)
 	 *
 	 * @attributes.expand Whether to expand the dump. Be default, we try to expand as much as possible. (Only in HTML output)
 	 *
