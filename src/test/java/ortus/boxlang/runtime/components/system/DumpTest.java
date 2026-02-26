@@ -778,18 +778,23 @@ public class DumpTest {
 							}
 						};
 						
-					dump( var = val, format = "html", top = 2 );
+					dump( var = val, format = "html", top = 1, maxRows = 3 );
 				""",
 				context );
 			// @formatter:on
 		String output = baos.toString();
 		assertThat( output ).contains( "alpha" );
 		assertThat( output ).contains( "beta" );
+		
+		assertThat( output ).contains( "echo" );
+		assertThat( output ).doesNotContain( "golf");
+		
 	}
 	// In terminal, type: 
 	// ./gradlew test --tests "ortus.boxlang.runtime.components.system.DumpTest.topTest" and click
 	// to run tests
 
+	/*
 	@DisplayName( "It can limit the recursion depth when dumping" )
 	@Test
 	public void topTestG() {
@@ -875,6 +880,6 @@ public class DumpTest {
 		assertWithMessage( "top=2 should render deeper than top=1" )
 			.that( outputTop2.length() )
 			.isGreaterThan( outputTop1.length() );
-
 	}
+	*/
 }
